@@ -27,7 +27,7 @@ span::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('/images/Love.jpeg');
+    background: url('/images/love-removebg-preview.png');
     background-size: cover;
     animation: moveShape 2s linear infinite;
 }
