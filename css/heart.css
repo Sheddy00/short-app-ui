@@ -110,11 +110,15 @@ img {
     .part1, .part2, .part3 {
         display: flex;
         flex-direction: column;
-        width: 300px;
+        width: 100%;
     }
 
     h1 {
         font-size: 25px;
+    }
+
+    section {
+        align-items: center;
     }
 }
 
