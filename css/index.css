@@ -124,4 +124,29 @@ input {
     margin: 0;
     width: 300px;
 }
-  
+
+.walk label input[type="checkbox"] {
+    display: none;
+}
+
+.walk label h1 {
+    position: relative;
+    display: inline-block;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.walk label h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.walk label input[type="checkbox"]:checked ~ h1 {
+    text-shadow: 0 0px 6px rgb(255, 0, 98);
+    color: #fff;
+}
