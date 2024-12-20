@@ -4,12 +4,6 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    /*background-image: url("/images/gif\(8\)");
-    background-repeat: no-repeat;
-    background-size: cover;*/
-}
-
 .loading {
     position: absolute;
     top: 50%;
