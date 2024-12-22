@@ -134,6 +134,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 8000);
         }, 2000);
     }, 10500);
+
+    //Login script
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    var login = document.getElementById('login');
+    var logup = document.getElementById('login-up');
+    var error = document.getElementById('erreur');
+            
+    login.addEventListener('click', () => {
+
+        var user = username.value;
+        var pwd = password.value;
+            
+        if ((user === 'Daniela' || user === 'Sheddy') && pwd === 'bae') {
+            var done = `Right user`;
+            login.textContent = `Allowed`;
+            error.textContent = done;
+            error.style.color = 'green'
+            error.style.display = 'block';
+            setTimeout(() => {
+                error.style.display = 'none';
+                window.location.href = '/pages/introduce.html';
+            }, 4000);
+        } else if ((user === '' || pwd === '') || (user === '' && pwd === '')) {
+            error.textContent = 'Enter username or password';
+            error.style.display = 'block';
+            login.textContent = `Try`;
+            setTimeout(() => {
+                error.style.display = 'none';    
+            }, 3000); 
+        } else {
+            error.textContent = 'Wrong username or password !';
+            error.style.color = 'red';
+            error.style.display = 'block';
+            login.textContent = `Try`;
+            setTimeout(() => {
+                error.style.display = 'none';
+            }, 3000);
+        }
+    });
 }) 
 
 document.addEventListener('DOMContentLoaded', () => {
