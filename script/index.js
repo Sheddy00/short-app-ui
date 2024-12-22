@@ -80,16 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    //remind select date
-    var sendDate = document.getElementById('send-date');
-    sendDate.addEventListener('click', () => {
-        const date = document.getElementById('date');
-        const time = document.getElementById('time');
-        const remind = document.getElementById('remind');
-        const text = `Don't forget on ${date.value} at ${time.value} !!`
-        remind.textContent = text;
-    });
-
     // heart mousemove event
     document.addEventListener('mousemove', function (e) {
         let body = document.querySelector('body');
@@ -145,3 +135,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }, 10500);
 }) 
+
+document.addEventListener('DOMContentLoaded', () => {
+    //remind select date
+    var sendDate = document.getElementById('send-date');
+    sendDate.addEventListener('click', () => {
+        var date = document.getElementById('date');
+        var time = document.getElementById('time');
+        var remind = document.getElementById('remind');
+        const text = `Don't forget on ${date.value} at ${time.value} !!`
+        remind.textContent = text;
+    });
+});
