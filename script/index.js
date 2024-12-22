@@ -103,4 +103,47 @@ document.addEventListener('DOMContentLoaded', function() {
             heart.remove();
         }, 3000)
     });
+
+    var percent = document.querySelector('.percent');
+    var load = document.querySelector('.loading');
+    var progress = document.querySelector('.progress');
+    var hi = document.querySelector('.container2');
+    var D = document.querySelector('.container');
+    var count = 4;
+    var per = 16;
+    var loading = setInterval(animate, 100);
+    function animate() {
+        if (count == 100 && per == 400) {
+            clearInterval(loading);
+        } else {
+            per = per + 4;
+            count++;
+            progress.style.width = per + 'px';
+            percent.textContent = count + '%';
+        }
+    }
+    setTimeout(() => {
+        load.style.display = 'none';
+        hi.style.display = 'block';
+        setTimeout(() => {
+            hi.style.display = 'none';
+            D.style.display = 'block'
+            setTimeout(() => {
+                D.style.display = 'none';
+                window.location.href = '/pages/acceuil.html';
+            }, 8000);
+        }, 2000);
+    }, 10500);
 }) 
+
+document.addEventListener('DOMContentLoaded', () => {
+    //remind select date
+    var sendDate = document.getElementById('send-date');
+    sendDate.addEventListener('click', () => {
+        var date = document.getElementById('date');
+        var time = document.getElementById('time');
+        var remind = document.getElementById('remind');
+        const text = `Don't forget on ${date.value} at ${time.value} !!`
+        remind.textContent = text;
+    });
+});
