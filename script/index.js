@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var user = username.value;
         var pwd = password.value;
             
-        if ((user === 'Daniela' || user === 'Sheddy') && pwd === 'bae') {
+        if ((user === 'Daniela' || user === 'Sheddy') && pwd === 'admin') {
             var done = `Right user`;
             login.textContent = `Allowed`;
             error.textContent = done;
@@ -189,4 +189,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 3000);
         }
     });
+    
 });
