@@ -135,6 +135,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }, 10500);
 
+}) 
+
+document.addEventListener('DOMContentLoaded', () => {
+    //remind select date
+    var sendDate = document.getElementById('send-date');
+    sendDate.addEventListener('click', () => {
+        var date = document.getElementById('date');
+        var time = document.getElementById('time');
+        var remind = document.getElementById('remind');
+        const text = `Don't forget on ${date.value} at ${time.value} !!`
+        remind.textContent = text;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     //Login script
     var username = document.getElementById('username');
     var password = document.getElementById('password');
@@ -156,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 error.style.display = 'none';
                 window.location.href = '/pages/introduce.html';
-            }, 4000);
+            }, 3000);
         } else if ((user === '' || pwd === '') || (user === '' && pwd === '')) {
             error.textContent = 'Enter username or password';
             error.style.display = 'block';
@@ -173,17 +188,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 error.style.display = 'none';
             }, 3000);
         }
-    });
-}) 
-
-document.addEventListener('DOMContentLoaded', () => {
-    //remind select date
-    var sendDate = document.getElementById('send-date');
-    sendDate.addEventListener('click', () => {
-        var date = document.getElementById('date');
-        var time = document.getElementById('time');
-        var remind = document.getElementById('remind');
-        const text = `Don't forget on ${date.value} at ${time.value} !!`
-        remind.textContent = text;
     });
 });
